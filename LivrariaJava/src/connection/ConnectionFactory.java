@@ -17,13 +17,13 @@ import java.sql.ResultSet;
 public class ConnectionFactory {
     
     // Atributos (dados de conexao com o banco de dados)
-    private final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private final String URL = "jdbc:mysql://localhost:3306/livraria";
-    private final String USER = "root";
-    private final String PASS = "";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/livraria";
+    private static final String USER = "root";
+    private static final String PASS = "";
     
     // Metodos
-    public Connection getConnection() {
+    public static Connection getConnection() {
         
         try {
             Class.forName(DRIVER);
